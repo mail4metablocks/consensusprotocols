@@ -14,3 +14,9 @@ Nodes vote on the proposed values, either by showing proof of work (in the case 
 The node or group of nodes with the most votes is chosen to create the next state of the network.
 The new state is broadcast to all nodes in the network, and the nodes verify that the new state is valid.
 If the new state is valid, it is accepted as the current state of the network. If it is not valid, the process starts again from step 1.
+
+### Implementation
+
+In this example, the Node class represents a node in the network, and the Network class represents the network of nodes. The Network class has a runConsensus method that runs the consensus protocol until all nodes in the network agree on a value.
+
+The consensus protocol works by having each node propose a value, and the node with the highest value is chosen as the agreed value. If there is a tie, the node with the most votes wins. The votes are initially set to 1 for each node, but they can be incremented if multiple nodes propose the same value.
